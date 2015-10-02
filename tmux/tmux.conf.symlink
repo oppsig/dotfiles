@@ -1,0 +1,73 @@
+unbind %
+bind | split-window -h
+bind - split-window -v
+set-option -g default-shell /bin/zsh
+
+set -g prefix C-a
+unbind C-b
+
+set -s escape-time 1
+
+set -g base-index 1
+setw -g pane-base-index 1
+
+bind r source-file ~/.tmux.conf \; display "Reloaded!"                                                             
+set -g mode-mouse on
+set -g mouse-select-pane on 
+set -g mouse-resize-pane off
+set -g mouse-select-window off
+set -g default-terminal "screen-256color"
+
+
+#}}}
+#-------- Statusbar {{{
+#------------------------------------------------------
+# UTF-8 character support in the status bar
+set-option -g status-utf8 on
+
+# refresh the status bar every 1 second.
+set-option -g status-interval 1000
+
+# Time messages remain in the status bar. Lower this number
+# if this is too distracting.
+set-option -g display-time 4000
+
+# command/message line colors
+set-option -g message-fg white
+set-option -g message-bg black
+set-option -g message-attr bright
+
+# CENTER {{{
+# window notifications; display activity on other window
+set-window-option -g monitor-activity on
+set-option -g visual-activity on
+
+# statusbar colors
+set-option -g status-fg white
+set-option -g status-bg black
+set-option -g status-attr default
+
+# window title colors; non active
+set-window-option -g window-status-fg cyan
+set-window-option -g window-status-bg default
+set-window-option -g window-status-attr dim
+
+# window title colors; active
+set-window-option -g window-status-current-fg white	#font
+set-window-option -g window-status-current-bg red	#boarder
+set-window-option -g window-status-current-attr bright
+
+
+#}}}
+# LEFT SIDE {{{
+# in the status bar.
+set-option -g status-justify centre
+set-option -g status-left-length 40
+set-option -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
+
+#}}}
+# RIGHT SIDE {{{
+# use "man date" to set the clock to your liking
+set-option -g status-right "#[fg=blue]#(~/battery Discharging) | #[fg=cyan]%a %D %l:%M:%p"
+
+#}}}
