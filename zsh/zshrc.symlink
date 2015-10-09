@@ -1,5 +1,11 @@
 # shortcut to this dotfiles path is $DOTFILES
-export ZSH=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
+
+#oh-my-zsh configuration
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussel"
+plugins=(brew git tmux mosh extract)
+source $ZSH/oh-my-zsh.sh
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
