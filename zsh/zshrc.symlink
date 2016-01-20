@@ -42,5 +42,5 @@ unset config_files
 
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
-plugins=(git extract tmux)
+plugins=(git extract tmux colored-man colorize)
 source $ZSH/oh-my-zsh.sh
