@@ -1,3 +1,15 @@
+### oppsig fork of holman dotfiles ###
+This is my fork of holman's dotfiles.
+This is tweaked to work oh-my-zsh.
+
+##intall
+```
+git clone https://github.com/oppsig/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+script/bootstrap
+```
+Then install oh-my-zsh as you would normally. (https://github.com/robbyrussell/oh-my-zsh)
+
 # holman does dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
