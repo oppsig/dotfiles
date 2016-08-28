@@ -1,6 +1,6 @@
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 set clipboard=unnamedplus
-
 syntax on
 set background=dark
+

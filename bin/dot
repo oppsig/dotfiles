@@ -6,9 +6,14 @@
 # to make sure you're on the latest and greatest.
 export DOTFILES=$HOME/.dotfiles
 
+<<<<<<< HEAD
 # Set OS X defaults
 $DOTFILES/osx/set-defaults.sh
 
+=======
+# Set macOS defaults
+$ZSH/macos/set-defaults.sh
+>>>>>>> upstream/master
 
 # Install homebrew
 $DOTFILES/homebrew/install.sh 2>&1
