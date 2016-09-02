@@ -2,7 +2,7 @@
 This is my fork of holman's dotfiles.
 This is tweaked to work oh-my-zsh.
 
-##intall
+##install
 ```
 git clone https://github.com/oppsig/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
