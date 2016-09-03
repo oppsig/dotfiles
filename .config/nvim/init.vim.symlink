@@ -1,0 +1,16 @@
+" Wrap gitcommit file types at the appropriate length
+filetype indent plugin on
+set clipboard+=unnamedplus
+
+syntax enable
+set background=dark
+
+"Plugins
+call plug#begin('~/.config/nvim/bundle')
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'flazz/vim-colorschemes'
+call plug#end()
+
+colorscheme solarized
+let g:deoplete#enable_at_startup = 1
+let g:solarized_termcolors=256
