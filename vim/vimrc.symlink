@@ -5,12 +5,43 @@ set clipboard+=unnamedplus
 syntax enable
 set background=dark
 
+"Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
 "Plugins
 call plug#begin('~/.config/nvim/bundle')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'flazz/vim-colorschemes'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Vimshell
+Plug 'flazz/vim-colorschemes' 		" Vim colorschemes
+Plug 'tmhedberg/SimpylFold' 		" Auto folding
+Plug 'vim-scripts/indentpython.vim' 	" Auto indent
+Plug 'zchee/deoplete-jedi'
+Plug 'neomake/neomake'
+"Plug 'scrooloose/syntastic'
 call plug#end()
 
-colorscheme solarized
+"Plugins config
+let g:deoplete#enable_at_startup = 1
+
+" Colorscheme
 let g:deoplete#enable_at_startup = 1
 let g:solarized_termcolors=256
+
+" Python indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" Flagging Unnecessary whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" UTF8 support
+set encoding=utf-8
