@@ -20,13 +20,19 @@ Plug 'tmhedberg/SimpylFold' 		" Auto folding
 Plug 'vim-scripts/indentpython.vim' 	" Auto indent
 Plug 'zchee/deoplete-jedi'
 Plug 'neomake/neomake'
+"Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Plug 'scrooloose/syntastic'
 call plug#end()
 
 "Plugins config
 let g:deoplete#enable_at_startup = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'tmuxline'
 
 " Colorscheme
+colorscheme solarized
 let g:deoplete#enable_at_startup = 1
 let g:solarized_termcolors=256
 
