@@ -15,3 +15,4 @@ ssh() {
 		command ssh "$@"
 	fi
 }
+alias mov-imdb='python ~/Code/Movie-Ratings/imdb2.py $1'
