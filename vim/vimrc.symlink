@@ -45,3 +45,5 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " UTF8 support
 set encoding=utf-8
+
+export EDITOR=nvim
