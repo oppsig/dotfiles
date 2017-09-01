@@ -11,3 +11,6 @@ atom.symlink/recovery
 bin/fastscraper
 
 git/gitconfig.local.symlink
+bin/verium.conf
+bin/veriumd
+bin/cpuminer
