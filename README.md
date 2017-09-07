@@ -1,6 +1,6 @@
 ### oppsig fork of holman dotfiles ###
 This is my fork of holman's dotfiles.
-This is tweaked to work oh-my-zsh.
+This is tweaked to work with oh-my-zsh.
 
 ##install
 ```
