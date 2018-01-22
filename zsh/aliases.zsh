@@ -17,3 +17,5 @@ ssh() {
 }
 alias mov-imdb='python ~/Code/Movie-Ratings/imdb2.py $1'
 alias e-gopro_process='vim ~/Code/GoPro-Studio-for-linux/gopro_process.sh'
+alias e-vim='vim ~/.config/nvim/init.vim'
+alias space='df -h /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1'

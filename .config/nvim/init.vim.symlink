@@ -1,5 +1,5 @@
 " General settings -{{{
-set t_Co=256 
+set t_Co=256
 set title
 set number
 
@@ -28,7 +28,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Vimshell
 Plug 'flazz/vim-colorschemes' 		" Vim colorschemes
 Plug 'tmhedberg/SimpylFold' 		" Auto folding
 Plug 'vim-scripts/indentpython.vim' 	" Auto indent
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi'		" Jedi framework for deoplete.
 Plug 'neomake/neomake'
 Plug 'nvie/vim-flake8'
 Plug 'vim-airline/vim-airline'		"alternative to powerline
@@ -37,6 +37,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'rhysd/github-complete.vim'
 Plug 'bitc/vim-bad-whitespace'
 Plug 'smancill/conky-syntax.vim'
+Plug 'tpope/vim-commentary'
+"Plug 'critiqjo/lldb.nvim'
 call plug#end()
 
 "Plugins config
@@ -75,3 +77,6 @@ nnoremap <C-H> <C-W><C-H>
 let g:SimpylFold_docstring_preview=1
 let python_highlight_all=1
 syntax on
+
+"Persistant undo file
+au BufWritePre /tmp/* setlocal shift.py

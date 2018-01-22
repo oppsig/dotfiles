@@ -16,3 +16,4 @@ bin/veriumd
 bin/cpuminer
 bin/gopro_import
 bin/gopro_process
+bin/nrk
