@@ -38,12 +38,14 @@ Plug 'rhysd/github-complete.vim'
 Plug 'bitc/vim-bad-whitespace'
 Plug 'smancill/conky-syntax.vim'
 Plug 'tpope/vim-commentary'
+Plug 'sbdchd/vim-run'
 "Plug 'critiqjo/lldb.nvim'
 call plug#end()
 
 "Plugins config
 let g:deoplete#enable_at_startup = 1
 let g:airline_powerline_fonts = 1
+let g:run_cmd_python = ['python3']
 "let g:airline_theme = 'tmuxline'
 
 " Colorscheme
