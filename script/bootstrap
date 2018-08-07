@@ -132,8 +132,15 @@ install_dotfiles () {
 
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*')
   do
-    dst="$HOME/.$(basename "${src%.*}")"
-    link_file "$src" "$dst"
+    if [[ $src = *"init.vim"* ]]
+    then 
+      vst="$HOME/.config/nvim/$(basename "${src%.*}")"
+      success "detected neovim"
+      link_file "$src" "$vst"
+    else
+      dst="$HOME/.$(basename "${src%.*}")"
+      link_file "$src" "$dst"
+    fi
   done
 }
 
