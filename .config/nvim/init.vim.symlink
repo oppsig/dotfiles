@@ -1,12 +1,7 @@
-" General settings -{{{
+" ================ General ======================== {{{
 set t_Co=256
 set title
 set number
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" -}}}
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
@@ -19,10 +14,23 @@ set background=dark
 set foldmethod=indent
 set foldlevel=99
 
-" Enable folding with the spacebar
-nnoremap <space> za
+" UTF8 support
+set encoding=utf-8
 
-"Plugins
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"Persistant undo file
+"au BufWritePre /tmp/* setlocal shift.py
+set undofile
+set undodir=~/.config/nvim/undo
+set undolevels=5000
+
+
+" }}}
+
+" ================ Plugins ======================== {{{
 call plug#begin('~/.config/nvim/bundle')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Vimshell
 Plug 'flazz/vim-colorschemes' 		" Vim colorschemes
@@ -45,6 +53,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 "Plug 'critiqjo/lldb.nvim'
 call plug#end()
 
+" -}}}
+
+" ================ Plugin config ======================== {{{
 "Plugins config
 let g:deoplete#enable_at_startup = 1
 let g:airline_powerline_fonts = 1
@@ -56,6 +67,16 @@ colorscheme solarized
 let g:deoplete#enable_at_startup = 1
 let g:solarized_termcolors=256
 
+" Init
+let g:SimpylFold_docstring_preview=1
+let python_highlight_all=1
+syntax on
+
+
+"-}}}
+
+
+" ================ Python ======================== {{{
 " Python indentation
 au BufNewFile,BufRead *.py
     \ set tabstop=4
@@ -69,25 +90,18 @@ au BufNewFile,BufRead *.py
 " Flagging Unnecessary whitespace
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" UTF8 support
-set encoding=utf-8
+"-}}}
 
+
+" ================ Keymaps ======================== {{{
 " Keymaps
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Init
-let g:SimpylFold_docstring_preview=1
-let python_highlight_all=1
-syntax on
-
-"Persistant undo file
-"au BufWritePre /tmp/* setlocal shift.py
-set undofile
-set undodir=~/.config/nvim/undo
-set undolevels=5000
+" Enable folding with the spacebar
+nnoremap <space> za
 
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
@@ -146,3 +160,5 @@ function! SaveAndExecutePython()
     setlocal readonly
     setlocal nomodifiable
 endfunction
+
+" vim:foldenable:foldmethod=marker
