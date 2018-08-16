@@ -2,6 +2,9 @@
 This is my fork of holman's dotfiles.
 This is tweaked to work with oh-my-zsh.
 
+##Additions
+* Config for neovim (~/.config/nvim/init.vim)
+
 ##install
 ```
 git clone https://github.com/oppsig/dotfiles.git ~/.dotfiles
@@ -12,6 +15,7 @@ Then install oh-my-zsh as you would normally. (https://github.com/robbyrussell/o
 
 # Local differences from repository
 Stash local environment variables or aliases in ~/.localrc
+
 Stash local neovim additions in ~/.localvim
 
 # holman does dotfiles
