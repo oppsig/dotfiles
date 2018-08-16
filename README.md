@@ -10,6 +10,10 @@ script/bootstrap
 ```
 Then install oh-my-zsh as you would normally. (https://github.com/robbyrussell/oh-my-zsh)
 
+# Local differences from repository
+Stash local environment variables or aliases in ~/.localrc
+Stash local neovim additions in ~/.localvim
+
 # holman does dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
