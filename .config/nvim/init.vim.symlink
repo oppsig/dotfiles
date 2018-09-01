@@ -17,7 +17,7 @@ set foldlevel=99
 " UTF8 support
 set encoding=utf-8
 
-
+" Start NERDTree if vim is started without file
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -75,7 +75,6 @@ syntax on
 
 "-}}}
 
-
 " ================ Python ======================== {{{
 " Python indentation
 au BufNewFile,BufRead *.py
@@ -91,7 +90,6 @@ au BufNewFile,BufRead *.py
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "-}}}
-
 
 " ================ Keymaps ======================== {{{
 " Keymaps
@@ -160,5 +158,16 @@ function! SaveAndExecutePython()
     setlocal readonly
     setlocal nomodifiable
 endfunction
+
+" Switch tabs with Control-Left and Control-Right
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+" Source local vim additions!
+if !empty(glob("~/.localvim"))
+   so ~/.localvim
+endif
+
+"- }}}
 
 " vim:foldenable:foldmethod=marker
