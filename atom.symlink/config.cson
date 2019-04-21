@@ -54,11 +54,12 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "one-light-ui"
-      "one-light-syntax"
+      "one-dark-ui"
+      "solarized-dark-syntax"
     ]
   editor:
-    fontFamily: "Menlo"
+    fontFamily: "Fira Mono"
+    fontSize: 23
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
