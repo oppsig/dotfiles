@@ -34,3 +34,5 @@
 [user]
 	email = oppsig@users.noreply.github.com
 	name = oppsig
+[credential]
+	helper = osxkeychain
