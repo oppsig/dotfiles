@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 atom.symlink/.apm
 atom.symlink/.node-gyp
 atom.symlink/.storage
@@ -10,9 +9,6 @@ atom.symlink/themes
 atom.symlink/blob-store
 atom.symlink/recovery
 bin/fastscraper
-
-=======
->>>>>>> upstream/master
 git/gitconfig.local.symlink
 bin/verium.conf
 bin/veriumd
@@ -20,3 +16,4 @@ bin/cpuminer
 bin/gopro_import
 bin/gopro_process
 bin/nrk
+bin/cleanhistory
