@@ -42,7 +42,7 @@ unset config_files
 
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
-plugins=(git extract tmux colored-man colorize k pipenv)
+plugins=(git extract tmux colored-man-pages colorize k pipenv)
 source $ZSH/oh-my-zsh.sh
 #source ~/.zplug/init.zsh
 #zplug "supercrabtree/k"
