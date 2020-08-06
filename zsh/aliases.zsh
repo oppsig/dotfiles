@@ -20,7 +20,7 @@ ssh() {
 alias mov-imdb='python ~/Code/Movie-Ratings/imdb2.py $1'
 alias e-gopro_process='vim ~/Code/GoPro-Studio-for-linux/gopro_process.sh'
 alias e-vim='vim ~/.config/nvim/init.vim'
-alias space='df -h /dev/sda2 /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1'
+alias space='df -h /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1 /dev/sdg1'
 alias fif='grep -rnw '.' -e '$1'' # Searches inside folder/subfolders for files containing $1
 alias ff='find '$1' -type f | fzf > selected'
 alias tb="nc termbin.com 9999" #Piping to termbin paste
@@ -28,3 +28,4 @@ alias tb="nc termbin.com 9999" #Piping to termbin paste
 backupfolder() {
 	tar -zcvf "${1}_$(date '+%Y-%m-%d').tar.gz" "$1"
 }
+alias dev='cd ~/Development'
