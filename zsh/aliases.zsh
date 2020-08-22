@@ -30,3 +30,4 @@ backupfolder() {
 }
 alias dev='cd ~/Development'
 alias nicepath='tr ':' '\n' <<< "$PATH"'
+alias e-sshconf='vim ̃~/.ssh/config'

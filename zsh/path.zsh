@@ -1,1 +1,1 @@
-PATH="$HOME/.local/bin/:$PATH"
+PATH="$HOME/.local/bin/:$HOME/node_modules/.bin:$PATH"
