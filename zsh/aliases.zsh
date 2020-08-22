@@ -29,3 +29,4 @@ backupfolder() {
 	tar -zcvf "${1}_$(date '+%Y-%m-%d').tar.gz" "$1"
 }
 alias dev='cd ~/Development'
+alias nicepath='tr ':' '\n' <<< "$PATH"'
