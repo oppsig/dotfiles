@@ -53,6 +53,8 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chr4/nginx.vim' " nginx
 Plug 'lepture/vim-jinja' " nginx jinja highlight test
+Plug 'overcache/NeoSolarized'
+
 "Plug 'critiqjo/lldb.nvim'
 call plug#end()
 
@@ -66,7 +68,9 @@ let g:run_cmd_python = ['python3']
 "let g:airline_theme = 'tmuxline'
 
 " Colorscheme
-colorscheme solarized
+"colorscheme solarized
+set termguicolors
+colorscheme NeoSolarized
 let g:deoplete#enable_at_startup = 1
 let g:solarized_termcolors=256
 
