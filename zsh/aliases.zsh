@@ -31,3 +31,4 @@ backupfolder() {
 alias dev='cd ~/Development'
 alias nicepath='tr ':' '\n' <<< "$PATH"'
 alias e-sshconf='vim ̃~/.ssh/config'
+alias e-sddm='sudo vim /usr/lib/sddm/sddm.conf.d/sddm.conf'
