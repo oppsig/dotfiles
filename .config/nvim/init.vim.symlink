@@ -32,11 +32,11 @@ set undolevels=5000
 
 " ================ Plugins ======================== {{{
 call plug#begin('~/.config/nvim/bundle')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Vimshell
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Vimshell
 Plug 'flazz/vim-colorschemes' 		" Vim colorschemes
 Plug 'tmhedberg/SimpylFold' 		" Auto folding
 Plug 'vim-scripts/indentpython.vim' 	" Auto indent
-Plug 'zchee/deoplete-jedi'		" Jedi framework for deoplete.
+"Plug 'zchee/deoplete-jedi'		" Jedi framework for deoplete.
 Plug 'neomake/neomake'
 Plug 'nvie/vim-flake8'
 Plug 'vim-airline/vim-airline'		"alternative to powerline
